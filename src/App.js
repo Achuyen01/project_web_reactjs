@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Footer from "./components/Footer/Footer";
 import store from "./store/store";
+import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 import { Provider } from "react-redux";
 import {
   CartPage,
@@ -11,6 +12,7 @@ import {
   HomePage,
   ProductSinglePage,
   SearchPage,
+ 
 } from "./pages/index.jsx";
 
 function App() {
@@ -18,10 +20,12 @@ function App() {
     <div className="App">
       <Provider store={store}>
         <BrowserRouter>
+          <ShoppingCart/>
           <Header />
           <Sidebar />
 
           <Routes>
+          
             {/* home page route */}
             <Route path="/" element={<HomePage />} />
             {/* single product route */}
