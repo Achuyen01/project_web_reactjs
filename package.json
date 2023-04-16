@@ -5,6 +5,8 @@
   "dependencies": {
     "@hookform/resolvers": "^2.9.11",
     "@reduxjs/toolkit": "^1.9.3",
+    "@stripe/react-stripe-js": "^2.1.0",
+    "@stripe/stripe-js": "^1.52.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -12,7 +14,12 @@
     "formik": "^2.2.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
+    "react-hook-form": "^7.43.6",
+    "react-icons": "^4.8.0",
+=======
     "react-hook-form": "^7.43.9",
+>>>>>>> 10a8610fe02b2f6ec12f15ba84a1c6ab995be1ec
     "react-paginate": "^8.1.4",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.8.2",
