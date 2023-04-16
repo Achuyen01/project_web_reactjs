@@ -4,27 +4,28 @@ import { useSelector, useDispatch } from "react-redux";
 import { shopping_cart } from "../../utils/images";
 import { Link } from "react-router-dom";
 import { formatPrice } from "../../utils/helpers";
-import {
-  getAllCarts,
-  removeFromCart,
-  toggleCartQty,
-  clearCart,
-  getCartTotal,
-} from "../../store/cartSlice";
+import { getAllCarts, removeFromCart, toggleCartQty, clearCart } from "../../store/cartSlice";
+import StripeCheckout from "react-stripe-checkout";
 
 const CartPage = () => {
   const dispatch = useDispatch();
   const carts = useSelector(getAllCarts);
   const { itemsCount, totalAmount } = useSelector((state) => state.cart);
+  const onToken = (token) => {
+    console.log(token);
+    dispatch(clearCart());
+  };
+
+  const handleCheckout = () => {};
 
   if (carts.length === 0) {
     return (
       <div className="container my-5">
         <div className="empty-cart flex justify-center align-center flex-column font-manrope">
           <img src={shopping_cart} alt="" />
-          <span className="fw-6 fs-15 text-gray">Your shopping cart is empty.</span>
+          <span className="fw-6 fs-15 text-gray">Giỏ hàng của bạn đang trống.</span>
           <Link to="/" className="shopping-btn bg-orange text-white fw-5">
-            Go shopping Now
+            Đi mua sắm ngay bây giờ
           </Link>
         </div>
       </div>
@@ -133,9 +134,11 @@ const CartPage = () => {
                 <span className="text-orange fs-22 mx-2 fw-6">{formatPrice(totalAmount)}</span>
               </div>
 
-              <button type="button" className="checkout-btn text-white bg-orange fs-16">
-                Check Out
-              </button>
+              <StripeCheckout
+                amount={totalAmount * 100}
+                token={onToken}
+                stripeKey="pk_test_51MqDa6CnJIa4Gyt64yUggYm6IjolIpWFmj2kIZAgWxf1poz5FwgIKs4ayEKOnt8OhemksZA7f2ohRyBSXlw94Nae00e7vs3NvG"
+              />
             </div>
           </div>
         </div>
