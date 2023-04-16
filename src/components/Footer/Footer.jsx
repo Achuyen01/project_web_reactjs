@@ -24,7 +24,7 @@ const Footer = () => {
                 <span className="text-sub">LIÊN HỆ CHÚNG TÔI</span>
                 <li>Email: THD@gmail.com</li>
                 <li>SĐT: +84 399085128</li>
-                <li>Địa chỉ : Yên Nghĩa, Quang Trung , Hà Đông</li>
+                <li>Địa chỉ : Vĩnh Hưng, Vĩnh Lộc, Thanh Hóa</li>
               </ul>
             </Link>
           </div>
