@@ -14,12 +14,8 @@
     "formik": "^2.2.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
     "react-hook-form": "^7.43.6",
     "react-icons": "^4.8.0",
-=======
-    "react-hook-form": "^7.43.9",
->>>>>>> 10a8610fe02b2f6ec12f15ba84a1c6ab995be1ec
     "react-paginate": "^8.1.4",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.8.2",

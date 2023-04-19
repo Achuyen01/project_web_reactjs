@@ -22,11 +22,7 @@ function App() {
     <div className="App">
       <Provider store={store}>
         <BrowserRouter>
-<<<<<<< HEAD
           <ShoppingCart/>
-=======
-
->>>>>>> 10a8610fe02b2f6ec12f15ba84a1c6ab995be1ec
           <Header />
           <Sidebar />
 
